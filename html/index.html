@@ -79,29 +79,44 @@
 
         <!-- Overlay -->
         <div
-          id="overlay"
+          id="overlayy"
           class="fixed inset-0 bg-transparent z-10 hidden transition-opacity duration-300"
         ></div>
 
-        <!-- Navbar Items -->
-        <div class="logo flex ml-auto mr-auto md:ml-0 md:mr-0">
+        <!-- Navbar items mobile -->
+        <div
+          class="logo hidden md:flex items-center justify-center relative left-16 md:ml-0 md:mr-0 transition-all duration-300"
+          id="logoo"
+        >
           <a href="#" class="flex items-center justify-center">
-            <img src="./../img/logo1.png" alt="Logo" class="w-20" />
+            <img
+              src="./../img/logo1.png"
+              alt="Logo"
+              class="w-20 transition-all duration-300"
+              id="logoo-img"
+            />
             <h1
-              class="font-medium text-white relative z-0 right-3 top-1 md:hidden"
+              class="font-medium text-white relative z-0 right-3 top-1 md:hidden transition-all duration-300"
+              id="logoo-text"
             >
               HijauLoka
             </h1>
           </a>
         </div>
+
+        <input
+          type="text"
+          id="search-inputt"
+          name="search-inputt"
+          class="w-48 mb-3 md:hidden bg-transparent border-b-2 border-white outline-none text-white placeholder-gray-400 transition-all duration-300"
+          placeholder="Search..."
+        />
+
         <div>
-          <ul class="flex gap-5 text-2xl items-center mr-10 mt-4 md:hidden">
+          <ul class="flex gap-5 text-2xl items-center mr-5 mt-4 md:hidden">
             <li>
-              <a href=""><i class="fa-solid fa-bell text-white"></i></a>
+              <a href="#"><i class="fa-solid fa-bell text-white"></i></a>
             </li>
-            <!-- <li>
-              <a href=""><i class="fa-solid fa-message text-white"></i></a>
-            </li> -->
           </ul>
         </div>
 
@@ -109,38 +124,58 @@
         <ul class="md:flex gap-10 text-lg mt-5 text-white mr-10 hidden">
           <li class="relative flex items-center mb-3">
             <a href="#" id="search-icon" class="flex items-center">
-                <i class="fa-solid fa-magnifying-glass text-white text-lg hover:text-green-300 transition-all duration-300"></i>
+              <i
+                class="fa-solid fa-magnifying-glass text-white text-lg hover:text-green-300 transition-all duration-300"
+              ></i>
             </a>
             <input
-                type="text"
-                id="search-input"
-                class="ml-2 bg-transparent border-b-2 border-white outline-none text-white placeholder-gray-400 w-0 opacity-0 transition-all duration-300"
-                placeholder="Search..."
+              type="text"
+              id="search-input"
+              class="ml-2 bg-transparent border-b-2 border-white outline-none text-white placeholder-gray-400 w-0 opacity-0 transition-all duration-300"
+              placeholder="Search..."
             />
-        </li>
+          </li>
           <li cla>
-              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+            <a
+              href="#"
+              class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Home</a
+            >
           </li>
           <li>
-              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Collection</a>
+            <a
+              href="#"
+              class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Collection</a
+            >
           </li>
           <li>
-              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Popular</a>
+            <a
+              href="#"
+              class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Popular</a
+            >
           </li>
           <li class="relative">
-              <a href="#">
-                  <i class="fa-solid fa-bell text-white transform -rotate-12 hover:rotate-12 transition-all duration-500"></i>
-              </a>
+            <a href="#">
+              <i
+                class="fa-solid fa-bell text-white transform -rotate-12 hover:rotate-12 transition-all duration-500"
+              ></i>
+            </a>
           </li>
           <li>
-              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Login</a>
+            <a
+              href="#"
+              class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Login</a
+            >
           </li>
-      </ul>
+        </ul>
       </nav>
 
       <!-- mobile section header -->
       <section
-        class="bg-green-800 md:hidden flex h-48 relative top-21 items-center justify-center"
+        class="bg-green-800 md:hidden flex h-48 relative top-20 items-center justify-center"
       >
         <div class="p-3 w-72">
           <div class="swiper mySwiper h-full">

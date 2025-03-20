@@ -52,18 +52,17 @@ document.querySelectorAll(".wishlist").forEach((wishlist) => {
     wishlist.classList.toggle("text-slate-300");
   });
 });
-
 const searchIcon = document.getElementById("search-icon");
 const searchInput = document.getElementById("search-input");
 
 searchIcon.addEventListener("click", (e) => {
-  e.preventDefault(); 
-  searchInput.classList.toggle("w-0"); 
-  searchInput.classList.toggle("opacity-0"); 
-  searchInput.classList.toggle("w-48"); 
-  searchInput.classList.toggle("opacity-100"); 
+  e.preventDefault();
+  searchInput.classList.toggle("w-0");
+  searchInput.classList.toggle("opacity-0");
+  searchInput.classList.toggle("w-48");
+  searchInput.classList.toggle("opacity-100");
   if (!searchInput.classList.contains("w-0")) {
-    searchInput.focus(); 
+    searchInput.focus();
   }
 });
 

@@ -296,6 +296,21 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
+  .left-14 {
+    left: calc(var(--spacing) * 14);
+  }
+  .left-16 {
+    left: calc(var(--spacing) * 16);
+  }
+  .left-20 {
+    left: calc(var(--spacing) * 20);
+  }
+  .left-64 {
+    left: calc(var(--spacing) * 64);
+  }
   .isolate {
     isolation: isolate;
   }
@@ -425,6 +440,9 @@
       max-width: 96rem !important;
     }
   }
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -449,17 +467,23 @@
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
   }
+  .mr-7 {
+    margin-right: calc(var(--spacing) * 7);
+  }
+  .mr-8 {
+    margin-right: calc(var(--spacing) * 8);
+  }
   .mr-10 {
     margin-right: calc(var(--spacing) * 10);
   }
   .mr-auto {
     margin-right: auto;
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -614,6 +638,9 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
@@ -628,6 +655,9 @@
   }
   .w-24 {
     width: calc(var(--spacing) * 24);
+  }
+  .w-36 {
+    width: calc(var(--spacing) * 36);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -2254,14 +2284,6 @@
   .transform-view {
     transform-box: view-box;
   }
-  .group-hover\:font-semibold {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-font-weight: var(--font-weight-semibold);
-        font-weight: var(--font-weight-semibold);
-      }
-    }
-  }
   .after\:absolute {
     &::after {
       content: var(--tw-content);
@@ -2336,13 +2358,6 @@
       }
     }
   }
-  .hover\:rotate-6 {
-    &:hover {
-      @media (hover: hover) {
-        rotate: 6deg;
-      }
-    }
-  }
   .hover\:rotate-12 {
     &:hover {
       @media (hover: hover) {
@@ -2361,22 +2376,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-green-800);
-      }
-    }
-  }
-  .hover\:font-bold {
-    &:hover {
-      @media (hover: hover) {
-        --tw-font-weight: var(--font-weight-bold);
-        font-weight: var(--font-weight-bold);
-      }
-    }
-  }
-  .hover\:font-semibold {
-    &:hover {
-      @media (hover: hover) {
-        --tw-font-weight: var(--font-weight-semibold);
-        font-weight: var(--font-weight-semibold);
       }
     }
   }
@@ -2401,83 +2400,12 @@
       }
     }
   }
-  .hover\:after\:absolute {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          position: absolute;
-        }
-      }
-    }
-  }
-  .hover\:after\:bottom-0 {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          bottom: calc(var(--spacing) * 0);
-        }
-      }
-    }
-  }
-  .hover\:after\:left-0 {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          left: calc(var(--spacing) * 0);
-        }
-      }
-    }
-  }
-  .hover\:after\:block {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          display: block;
-        }
-      }
-    }
-  }
-  .hover\:after\:h-0\.5 {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          height: calc(var(--spacing) * 0.5);
-        }
-      }
-    }
-  }
   .hover\:after\:w-full {
     &:hover {
       @media (hover: hover) {
         &::after {
           content: var(--tw-content);
           width: 100%;
-        }
-      }
-    }
-  }
-  .hover\:after\:bg-white {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          background-color: var(--color-white);
-        }
-      }
-    }
-  }
-  .hover\:after\:content-\[\'\'\] {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          --tw-content: '';
-          content: var(--tw-content);
         }
       }
     }
