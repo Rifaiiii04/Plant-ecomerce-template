@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,11 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
-  <body class="bg-slate-100 overflow-x-hidden">
+  <body class="bg-slate-100 overflow-x-hidden font-poppins">
     <header>
-      <nav class="bg-green-800 flex justify-between p-3">
+      <nav
+        class="bg-green-800 flex justify-between p-3 fixed top-0 w-screen z-100"
+      >
         <!-- Mobile Nav -->
         <button
           id="toggleSidebar"
@@ -93,30 +95,53 @@
           </a>
         </div>
         <div>
-          <ul class="flex gap-5 text-2xl items-center mr-5 mt-4 md:hidden">
+          <ul class="flex gap-5 text-2xl items-center mr-10 mt-4 md:hidden">
             <li>
               <a href=""><i class="fa-solid fa-bell text-white"></i></a>
             </li>
-            <li>
+            <!-- <li>
               <a href=""><i class="fa-solid fa-message text-white"></i></a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
         <!-- md nav -->
-        <ul
-          class="md:flex gap-10 text-2xl mt-4 font-semibold text-white mr-10 hidden"
-        >
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Collection</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Notification</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
+        <ul class="md:flex gap-10 text-lg mt-5 text-white mr-10 hidden">
+          <li class="relative flex items-center mb-3">
+            <a href="#" id="search-icon" class="flex items-center">
+                <i class="fa-solid fa-magnifying-glass text-white text-lg hover:text-green-300 transition-all duration-300"></i>
+            </a>
+            <input
+                type="text"
+                id="search-input"
+                class="ml-2 bg-transparent border-b-2 border-white outline-none text-white placeholder-gray-400 w-0 opacity-0 transition-all duration-300"
+                placeholder="Search..."
+            />
+        </li>
+          <li cla>
+              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+          </li>
+          <li>
+              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Collection</a>
+          </li>
+          <li>
+              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Popular</a>
+          </li>
+          <li class="relative">
+              <a href="#">
+                  <i class="fa-solid fa-bell text-white transform -rotate-12 hover:rotate-12 transition-all duration-500"></i>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="relative inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Login</a>
+          </li>
+      </ul>
       </nav>
 
       <!-- mobile section header -->
-      <section class="bg-green-800 md:hidden flex items-center justify-center">
+      <section
+        class="bg-green-800 md:hidden flex h-48 relative top-21 items-center justify-center"
+      >
         <div class="p-3 w-72">
           <div class="swiper mySwiper h-full">
             <div class="swiper-wrapper">
@@ -171,20 +196,110 @@
           </div>
         </div>
       </section>
+
+      <!-- md section -->
+      <section
+        class="hidden md:flex bg-green-800 relative top-20 flex-col md:flex-row p-10 items-center text-center md:text-left text-white"
+      >
+        <div class="md:w-1/2">
+          <h1 class="text-4xl font-bold">Welcome to HijauLoka!</h1>
+          <p class="mt-4 text-lg leading-relaxed">
+            Temukan berbagai tanaman hias sesuai selera Anda di sini. Buat
+            lingkungan sekitar Anda semakin indah dengan tanaman hias.
+          </p>
+          <a
+            href="#main"
+            class="text-xl relative top-8 bg-white rounded-lg text-green-800 p-3 font-bold shadow-lg"
+            >Lihat Produk</a
+          >
+        </div>
+        <div class="md:w-1/2 grid grid-cols-3 gap-2 items-center">
+          <div class="grid grid-rows-2 gap-2">
+            <img
+              src="./../img/plant1.png"
+              class="w-full h-full object-cover rounded-lg"
+              alt="Plant Image"
+            />
+            <img
+              src="./../img/plant2.png"
+              class="w-full h-full object-cover rounded-lg"
+              alt="Plant Image"
+            />
+          </div>
+          <div class="col-span-2 relative">
+            <img
+              src="./../img/plant3.png"
+              class="w-full h-full object-cover rounded-lg"
+              alt="Plant Image"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-6 flex flex-col justify-end rounded-lg"
+            >
+              <h3 class="text-2xl font-bold">Anthurium Flower</h3>
+              <p class="text-sm">
+                The flower of human being. It has meaningful of fact that the
+                plant always grow whatever season and weather...
+              </p>
+              <a
+                href="#seller"
+                class="mt-4 px-4 py-2 bg-white text-green-900 font-bold rounded-lg text-center hover:bg-green-800 hover:text-white transition duration-500"
+                >READ MORE</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
 
+    <!-- target scroll -->
+    <div id="main"></div>
     <!-- main -->
-    <main class="h-full mt-3">
-      <h1 class="font-bold ml-3 text-2xl text-green-800">For You</h1>
+    <main class="h-full mt-28">
+      <h1 class="font-bold ml-3 text-md text-green-800 sm:text-lg">For You</h1>
       <div
-        class="h-full p-2 grid grid-cols-2 gap-3 items-center justify-between"
+        class="h-full p-2 sm:p-3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 md:gap-0 lg:gap-0 md:gap-y-5 gap-y-10 place-items-center sm:place-items-start justify-between"
       >
         <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
+            ></i>
+          </div>
+          <div>
+            <img
+              src="./../img/plant2.png"
+              alt=""
+              class="rounded-md shadow-lg w-full"
+            />
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
+              Heuchera Merah
+            </h3>
+            <div class="flex justify-between">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
+                Rp25.000
+              </h3>
+              <i
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- produk1 -->
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
+          <div class="absolute">
+            <i
+              id="wishlist"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
@@ -193,52 +308,31 @@
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
         </div>
         <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
-            ></i>
-          </div>
-          <div>
-            <img
-              src="./../img/plant2.png"
-              alt=""
-              class="rounded-md shadow-lg w-full"
-            />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
-              Heuchera Merah
-            </h3>
-            <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
-                Rp25.000
-              </h3>
-              <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
-              ></i>
-            </div>
-          </div>
-        </div>
-        <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
-          <div class="absolute">
-            <i
-              id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
@@ -247,25 +341,31 @@
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
         </div>
         <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
@@ -274,60 +374,82 @@
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- produk1 -->
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
+          <div class="absolute">
+            <i
+              id="wishlist"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
+            ></i>
+          </div>
+          <div>
+            <img
+              src="./../img/plant3.png"
+              alt=""
+              class="rounded-md shadow-lg w-full"
+            />
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
+              Heuchera Merah
+            </h3>
+            <div class="flex justify-between">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
+                Rp25.000
+              </h3>
+              <i
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Best Sellers-->
-      <div class="mt-10"></div>
-      <h1 class="font-bold ml-3 text-2xl text-green-800">Best Sellers</h1>
+      <div class="mt-8"></div>
+
+      <!-- best seller -->
+      <div class="flex justify-between">
+        <h1 class="font-bold ml-3 text-md text-green-800 sm:text-lg">
+          Best Seller
+        </h1>
+        <a
+          href="#"
+          class="font-bold ml-3 text-md text-green-800 sm:text-lg mr-5 decoration-1"
+          ><u>Lihat lainnya..</u></a
+        >
+      </div>
       <div
-        class="h-full p-2 grid grid-cols-2 gap-3 items-center justify-between"
+        class="h-full p-2 sm:p-3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 md:gap-0 lg:gap-0 md:gap-y-5 gap-y-10 place-items-center sm:place-items-start justify-between"
       >
         <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
-            ></i>
-          </div>
-          <div>
-            <img
-              src="./../img/plant1.png"
-              alt=""
-              class="rounded-md shadow-lg w-full"
-            />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
-              Heuchera Merah
-            </h3>
-            <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
-                Rp25.000
-              </h3>
-              <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
-              ></i>
-            </div>
-          </div>
-        </div>
-        <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
-          <div class="absolute">
-            <i
-              id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
@@ -336,25 +458,31 @@
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
         </div>
         <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
@@ -363,42 +491,83 @@
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
         </div>
-        <!-- produk1 -->
-        <div class="bg-white shadow-lg relative w-full h-70 p-2 rounded-lg">
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
           <div class="absolute">
             <i
               id="wishlist"
-              class="fa-solid fa-heart text-2xl text-slate-300"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
             ></i>
           </div>
           <div>
             <img
-              src="./../img/plant2.png"
+              src="./../img/plant3.png"
               alt=""
               class="rounded-md shadow-lg w-full"
             />
-            <h3 class="relative top-2 font-bold text-slate-800 text-md">
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
               Heuchera Merah
             </h3>
             <div class="flex justify-between">
-              <h3 class="relative top-6 font-bold text-green-800 text-xs">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
                 Rp25.000
               </h3>
               <i
-                class="fa-solid fa-cart-shopping relative top-6 right-2 text-green-800"
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-lg w-40 sm:w-52 h-64 sm:h-80 p-2 rounded-lg transform hover:scale-105 transition-all duration-300"
+        >
+          <div class="absolute">
+            <i
+              id="wishlist"
+              class="fa-solid fa-heart text-2xl sm:text-3xl text-slate-300"
+            ></i>
+          </div>
+          <div>
+            <img
+              src="./../img/plant3.png"
+              alt=""
+              class="rounded-md shadow-lg w-full"
+            />
+            <h3
+              class="relative top-2 font-bold text-slate-800 text-md sm:text-xl"
+            >
+              Heuchera Merah
+            </h3>
+            <div class="flex justify-between">
+              <h3
+                class="relative top-6 font-bold text-green-800 text-xs sm:text-lg"
+              >
+                Rp25.000
+              </h3>
+              <i
+                class="fa-solid fa-cart-shopping relative top-6 right-2 sm:text-2xl text-green-800"
               ></i>
             </div>
           </div>
@@ -406,17 +575,68 @@
       </div>
     </main>
 
-    <footer class="bg-green-800 text-white mt-5">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex flex-wrap justify-between">
-              <div class="w-full md:w-1/2 text-center">
-                <h2 class="text-3xl font-bold ">About Us</h2>
-                <p class="mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  scelerisque, nisi ut fermentum fermentum, nulla nunc tristique
-                  justo, ac ultricies mi velit et velit.
-                </p>
-              </div>
+    <footer class="bg-gray-200">
+      <div
+        class="max-w-7xl p-6 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left"
+      >
+        <!-- Customer Care -->
+        <div>
+          <h3 class="font-bold text-black">CUSTOMER CARE</h3>
+          <ul class="text-sm mt-2 space-y-1 text-black">
+            <li><a href="#" class="hover:underline">CONTACT US</a></li>
+            <li><a href="#" class="hover:underline">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="font-bold text-black">FOLLOW US</h3>
+          <div class="flex justify-center md:justify-start space-x-3 mt-2">
+            <a
+              href="#"
+              class="bg-green-900 w-8 h-8 text-white flex justify-center items-center rounded-md"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-green-900 w-8 h-8 text-white flex justify-center items-center rounded-md"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-green-900 w-8 h-8 text-white flex justify-center items-center rounded-md"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-green-900 w-8 h-8 text-white flex justify-center items-center rounded-md"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-green-900 w-8 h-8 text-white flex justify-center items-center rounded-md"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <!-- <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2">
+          <textarea type="text" placeholder="hijauloka23@gmail.com" class="bg-white text-black p-2 rounded-lg shadow-md w-full md:w-64 focus:outline-none"></textarea>
+          <button class="bg-gray-800 text-white px-10  py-2 mt-5 rounded-lg shadow-md">Send</button>
+        </div> -->
+      </div>
+
+      <div
+        class="bg-green-900 text-white text-center w-full h-14 flex items-center justify-center mt-6"
+      >
+        <p>Copyright @ 2025</p>
+      </div>
     </footer>
   </body>
 
