@@ -72,3 +72,20 @@ document.addEventListener("click", (e) => {
     searchInput.classList.remove("w-48", "opacity-100");
   }
 });
+
+// Kuantitas
+const decrease = document.getElementById("decrease");
+const increase = document.getElementById("increase");
+const quantity = document.getElementById("quantity");
+
+decrease.addEventListener("click", () => {
+  let value = parseInt(quantity.value);
+  if (value > 1) {
+    quantity.value = value - 1;
+  }
+});
+
+increase.addEventListener("click", () => {
+  let value = parseInt(quantity.value);
+  quantity.value = value + 1;
+});
